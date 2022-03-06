@@ -44,7 +44,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 
 
 // Function to draw rectangle on the canvas.
-	function draw_rectangle() { // Names function.
+	function rectangleDraw() { // Names function.
       		let canvas = document.getElementById("myCanvas"); // Finds canvas element.
       		if (canvas.getContext) { // If canvas.getContext is called, ctx is defined to draw the rectangle. 
        			let ctx = canvas.getContext("2d"); // Defines ctx.
@@ -55,7 +55,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	}
 
 // Function that puts my name onto the canvas.
-	function draw_name() { // Names function.
+	function nameDraw() { // Names function.
 		let canvas = document.getElementById("myCanvas"); // Finds canvas element.
       		if (canvas.getContext) { // If canvas.getContext is called, ctx is defined to put my name onto the canvas.
        			let ctx = canvas.getContext("2d"); // Defines ctx.
@@ -67,13 +67,16 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	}
 
 // Function that puts an image onto the canvas.
-	window.onload = draw_image() { // Names function.
+	window.onload = imageDraw() { // Names function.
 		let canvas = document.getElementById("myCanvas"); // Finds canvas element.
        		let ctx = canvas.getContext("2d"); // Defines ctx.
 		let img = document.getElementById("water lilies"); // Finds image element. 
 		
 		ctx.drawImage(img, 10, 10); // Puts image on the canvas.
 	}
+	
+//Function that clears canvas.
+	function clear()
 					
 </script> <!-- End of script. -->
 
@@ -106,15 +109,15 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 <div id="content" class="w3-container">
 
-	<canvas id="myCanvas" width="300" height="225" style="border:1px solid #4B0082;"></canvas> <!-- Code for canvas; border color is purple. -->
+	<p><canvas id="myCanvas" width="300" height="225" style="border:1px solid #4B0082;"></canvas></p> <!-- Code for canvas; border color is purple. -->
 	
-	<button class="w3-btn w3-purple w3-round" onclick="draw_rectangle();">Rectangle</button> <!-- Button for drawing rectangle; onclick for the draw_rectangle() function will put a rectangle on the canvas. -->
+	<button class="w3-btn w3-purple w3-round" onclick="rectangleDraw();">Rectangle</button> <!-- Button for drawing rectangle; onclick for the draw_rectangle() function will put a rectangle on the canvas. -->
+
+	<button class="w3-btn w3-purple w3-round" onclick="nameDraw();">Name</button> <!-- Button for printing name; onclick for the draw_name() function will put my name (Izabella DeCerbo) on the canvas. -->
+
+	<button class="w3-btn w3-purple w3-round" onclick="imageDraw();">Image</button> <!-- Button for putting an image on the canvas; onclick for the draw_image() function will put an image on the canvas. -->
 	
-	<button class="w3-btn w3-purple w3-round" onclick="draw_name();">Name</button> <!-- Button for printing name; onclick for the draw_name() function will put my name (Izabella DeCerbo) on the canvas. -->
-	
-	<button class="w3-btn w3-purple w3-round" onclick="draw_image();">Image</button> <!-- Button for putting an image on the canvas; onclick for the draw_image() function will put an image on the canvas. -->
-	
-	<img id="water lilies" width="200" height="100" href="https://imgc.allpostersimages.com/img/posters/clau…0&artPerspective=n&artWidth=550&background=ffffff" alt="Claude Monet's Purple Water Lilies"> <!-- Link of image; will project image onto canvas when draw_image() function is called with the button. -->
+	<img id="water lilies" width="200" height="100" href="https://images.app.goo.gl/b5c2ckju4Uno6wuA9" alt="Claude Monet's Purple Water Lilies"> <!-- Link of image; will project image onto canvas when draw_image() function is called with the button. -->
 	
 	
 
