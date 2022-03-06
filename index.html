@@ -73,7 +73,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 <div id="content" class="w3-container">
 
-	<p><canvas id="myCanvas" width="300" height="225" style="border:1px solid #4B0082;"></canvas></p> <!-- Code for canvas; border color is purple. -->
+	<p><canvas id="myCanvas" width="300" height="225" style="border:2px solid #4B0082;"></canvas></p> <!-- Code for canvas; border color is purple. -->
 
 <script> // Start of script.
 
@@ -102,16 +102,18 @@ function drawName() { // Names function.
 	
 	<button onClick="drawName();" class="w3-btn w3-purple w3-round">Name</button> <!-- Button for printing name; onclick for the drawName() function will put my name (Izabella DeCerbo) on the canvas. -->
 
-<!-- IDs the image for canvas. --> <img id="water lilies" width="200" height="100" 
-     src="https://imgc.allpostersimages.com/img/posters/claude-monet-water-lily-pond-3_u-L-PYATZG0.jpg" alt="Claude Monet's Purple Water Lilies"> <!-- Link of image; will project image onto canvas when draw_image() function is called with the button. -->
+	<!-- IDs the image for canvas. -->
+	<img id="water lilies" width="300" height="225"> 
 	
 <script>
-
+	     
 // Function to put an image onto the canvas.
 function drawImage() { // Names function.
 	var canvas = document.getElementById("myCanvas"); // Finds canvas element.
        	var ctx = canvas.getContext("2d"); // Defines ctx.
-	var img = document.getElementById("water lilies"); // Finds image element. 
+	var img = document.getElementById("water lilies"); // Finds image element.
+	img.src = "https://imgc.allpostersimages.com/img/posters/claude-monet-water-lily-pond-3_u-L-PYATZG0.jpg";
+	img.alt = "Claude Monet's Purple Water Lilies";
 	ctx.drawImage(img, 10, 10); // Puts image on the canvas.
 };
 </script>
