@@ -107,11 +107,12 @@ function drawName() { // Names function.
 <script>
 	
 // Function to put an image onto the canvas.
-window.onload = drawImage() { // Names function.
 	var canvas = document.getElementById("myCanvas"); // Finds canvas element.
        	var ctx = canvas.getContext("2d"); // Defines ctx.
-	var img = document.getElementById("water lilies"); // Creates element for the image called "water lilies". 
-	ctx.drawImage(img, 10, 10); // Puts image on the canvas.
+	var lilies = new Image(280, 205); // Defines "lilies" as the new image variable; 280, 225 are the dimensions of the image.
+	lilies.src = "https://imgc.allpostersimages.com/img/posters/claude-monet-water-lily-pond-3_u-L-PYATZG0.jpg"; // Location of the image.
+	lilies.onload = drawImage(); // Names function.
+		ctx.drawImage(img, 0, 0); // Puts image on the canvas.
 };
 </script>
 	
@@ -123,7 +124,7 @@ window.onload = drawImage() { // Names function.
 	function clearCanvas() { // Names function. 
 		var canvas = document.getElementById("myCanvas"); // Finds canvas element.
 		var ctx = canvas.getContext("2d"); // If canvas.getContext is called, ctx is defined to reset the canvas.
-		ctx.clearRect(0, 0, canvas.width, canvas.height); // Code to clear the canvas
+		ctx.clearRect(0, 0, canvas.width, canvas.height); // Code to clear the canvas.
 };
 </script> <!-- End of script. -->
 	
