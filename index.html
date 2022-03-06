@@ -102,18 +102,18 @@ function drawName() { // Names function.
 	
 	<button onClick="drawName();" class="w3-btn w3-purple w3-round">Name</button> <!-- Button for printing name; onclick for the drawName() function will put my name (Izabella DeCerbo) on the canvas. -->
 
-	<!-- IDs the image for canvas. -->
-	<img id="water lilies" width="300" height="225"> 
-	
 <script>
-	     
+
+// IDs the image for canvas.
+<img id="water lilies" width="300" height="225"> 
+	
 // Function to put an image onto the canvas.
 function drawImage() { // Names function.
 	var canvas = document.getElementById("myCanvas"); // Finds canvas element.
        	var ctx = canvas.getContext("2d"); // Defines ctx.
 	var img = document.getElementById("water lilies"); // Finds image element.
-	img.src = "https://imgc.allpostersimages.com/img/posters/claude-monet-water-lily-pond-3_u-L-PYATZG0.jpg";
-	img.alt = "Claude Monet's Purple Water Lilies";
+	img.src = "https://imgc.allpostersimages.com/img/posters/claude-monet-water-lily-pond-3_u-L-PYATZG0.jpg"; // Link for image.
+	img.alt = "Claude Monet's Purple Water Lilies"; // Alternative text for image in case it does not show up on browser.
 	ctx.drawImage(img, 10, 10); // Puts image on the canvas.
 };
 </script>
