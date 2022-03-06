@@ -34,13 +34,48 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
    </head> 
 
 
-<script>
-/* 
+<script> //Start of script.
+ 
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+/* 
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
-console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 */
-</script>
+console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+
+
+// Function to draw rectangle on the canvas.
+	function draw_rectangle() { // Names function.
+      		let canvas = document.getElementById("myCanvas"); // Finds canvas element.
+      		if (canvas.getContext) { // If canvas.getContext is called, ctx is defined to draw the rectangle. 
+       			let ctx = canvas.getContext("2d"); // Defines ctx.
+			
+			ctx.fillStyle = "#800080"; // Color of rectangle (purple).
+        		ctx.fillRect(50, 25, 150, 100); // Dimensions of rectangle.
+      		}
+	}
+
+// Function that puts my name onto the canvas.
+	function draw_name() { // Names function.
+		let canvas = document.getElementById("myCanvas"); // Finds canvas element.
+      		if (canvas.getContext) { // If canvas.getContext is called, ctx is defined to put my name onto the canvas.
+       			let ctx = canvas.getContext("2d"); // Defines ctx.
+			
+			ctx.font = "30px Comic Sans MS"; // Font of the canvas (comic sans) and size of font (30px).
+			ctx.textAlign = "center"; // Centers text.
+			ctx.fillText("Izabella DeCerbo", canvas.width/2, canvas.height/2); // Prints "Izabella DeCerbo" onto the canvas.
+		}
+	}
+
+// Function that puts an image onto the canvas.
+	window.onload = draw_image() { // Names function.
+		let canvas = document.getElementById("myCanvas"); // Finds canvas element.
+       		let ctx = canvas.getContext("2d"); // Defines ctx.
+		let img = document.getElementById("water lilies"); // Finds image element. 
+		
+		ctx.drawImage(img, 10, 10); // Puts image on the canvas.
+	}
+					
+</script> <!-- End of script. -->
 
 
 
@@ -71,15 +106,23 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 <div id="content" class="w3-container">
 
-	<p><canvas id="myCanvas" width="200" height="100" style="border:1px solid #4B0082;"> <!-- Code for canvas; border color is purple. -->
-
-	</p></canvas>
+	<canvas id="myCanvas" width="300" height="225" style="border:1px solid #4B0082;"></canvas> <!-- Code for canvas; border color is purple. -->
 	
+	<button class="w3-btn w3-purple w3-round" onclick="draw_rectangle();">Rectangle</button> <!-- Button for drawing rectangle; onclick for the draw_rectangle() function will put a rectangle on the canvas. -->
+	
+	<button class="w3-btn w3-purple w3-round" onclick="draw_name();">Name</button> <!-- Button for printing name; onclick for the draw_name() function will put my name (Izabella DeCerbo) on the canvas. -->
+	
+	<button class="w3-btn w3-purple w3-round" onclick="draw_image();">Image</button> <!-- Button for putting an image on the canvas; onclick for the draw_image() function will put an image on the canvas. -->
+	
+	<img id="water lilies" width="200" height="100" href="https://imgc.allpostersimages.com/img/posters/clau…0&artPerspective=n&artWidth=550&background=ffffff" alt="Claude Monet's Purple Water Lilies"> <!-- Link of image; will project image onto canvas when draw_image() function is called with the button. -->
+	
+	
+
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-<footer class="w3-bottom w3-container w3-deep-purple"> <!-- Changedf footer to deep purple. -->
+<footer class="w3-bottom w3-container w3-deep-purple"> <!-- Changed footer to deep purple. -->
 	<p>DIY!</p>
 </footer>
 
