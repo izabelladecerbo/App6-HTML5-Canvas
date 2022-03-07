@@ -20,7 +20,7 @@ Brief Description of Goal of Code:
 Canvas with buttons that allow users to draw a rectangle, add their name, load an image onto the canvas, and clear all drawings from the canvas.  
  
 Known Issues:
-N/A
+No known issues with the code.
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -86,7 +86,7 @@ function drawRectangle() { // Names function.
 };
 </script> <!-- End of script. -->
 	
-	<p><button onClick="drawRectangle();" class="w3-btn w3-purple w3-round">Rectangle</button></p> <!-- Button for drawing rectangle; onclick for the drawRectangle() function will put a rectangle on the canvas. -->
+	<button onClick="drawRectangle();" class="w3-btn w3-purple w3-round">Rectangle</button> <!-- Button for drawing rectangle; onclick for the drawRectangle() function will put a rectangle on the canvas. -->
 
 <script> // Start of script.
 
@@ -111,7 +111,7 @@ function drawImage() { // Defines function that draws the image.
 	var waterlilies = new Image(); // Defines image variable.
 	waterlilies.src = "monet water lilies.jpeg"; // Image source for the image. 
 	waterlilies.onload = function() { // Defines new function for the image to appear on the canvas.
-		ctx.drawImage(waterlilies, 2, 2, 50, 50); // Code for the dimensions of the image.
+		ctx.drawImage(waterlilies, 2, 2, 100, 100); // Code for the dimensions of the image.
 	} 
 };
 </script> <!-- End of script. -->
