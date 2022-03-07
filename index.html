@@ -112,7 +112,7 @@ function drawName() { // Names function.
 	var lilies = new Image(280, 205); // Defines "lilies" as the new image variable; 280, 225 are the dimensions of the image.
 	lilies.src = "https://imgc.allpostersimages.com/img/posters/claude-monet-water-lily-pond-3_u-L-PYATZG0.jpg"; // Location of the image.
 	lilies.onload = drawImage(); // Names function.
-		ctx.drawImage(img, 0, 0); // Puts image on the canvas.
+		ctx.drawImage(lilies, 0, 0); // Puts image on the canvas.
 </script>
 	
 	<button onClick="drawImage();" class="w3-btn w3-purple w3-round">Image</button> <!-- Button for putting an image on the canvas; onclick for the drawImage() function will put an image on the canvas. -->
